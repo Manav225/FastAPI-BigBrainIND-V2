@@ -83,7 +83,7 @@ def predict(data: Complaint):
     # --- Step 2: Sarvam Reasoning ---
     legal_reasoning = {}
     if predicted_labels:
-        prompt_template = """
+        prompt_template = """"""
         You are a legal reasoning assistant trained on Indian Penal Code (IPC).
         Task:
         Complaint: {complaint}
@@ -97,7 +97,7 @@ def predict(data: Complaint):
         - Give short prima facie conclusion.
 
         Output must be JSON only (no markdown, no code block)
-        """
+        """"""
         user_prompt = prompt_template.format(
             complaint=data.text,
             labels=", ".join(predicted_labels)
